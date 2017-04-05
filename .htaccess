@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^download/(.+)/(.+).html$ view.php?id=$1&permalink=$2
+RewriteRule ^v/(.+)/(.+).html$ view.php?id=$1&permalink=$2
+RewriteRule ^lagu/(.+)/page/(.+).html$ lagu.php?q=$1&page=$2
+RewriteRule ^lagu/(.+).html$ lagu.php?q=$1
+RewriteRule ^musikmp3/(.+).mp3$ link1.php?id=$1
+RewriteRule ^genre/(.+)/page/(.+).html$ lagu.php?genre=$1&page=$2
+RewriteRule ^genre/(.+).html$ lagu.php?genre=$1
+RewriteRule ^filevideo-(.+).xhtml$ video.php?q=$1
+RewriteRule ^search/(.+)$ video.php?q=$1
+RewriteRule ^carimp3-(.+).xhtml$ lagu.php?q=$1
+RewriteRule ^searchmp3/(.+)$ lagu.php?q=$1
+RewriteRule ^musicmp3-(.+)-(.+).xhtml$ lview.php?permalink=$1&id=$2
+RewriteRule ^mp3/(.+)/page-(.+).html$ lagu.php?q=$1&page=$2
+RewriteRule ^(.+).html$ $1.php
+RewriteRule ^watch$ download.php
+RewriteRule ^disclaimer$ disclaimer.php
+RewriteRule ^nonton$ nonton.php
+RewriteRule ^chart-lagu$ chart.php
+RewriteRule ^music$ lagu.php
+RewriteRule ^googlec8e4b74ede9d6135.html$ googlec8e4b74ede9d6135.php
+RewriteRule ^oI6ZRcumS5tXsDe4oi2OhMnzGI8.html$ oI6ZRcumS5tXsDe4oi2OhMnzGI8.php
+RewriteRule ^BingSiteAuth.xml$ BingSiteAuth.php
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+RewriteRule ^rss.xml$ rss.php [L]
+LimitRequestBody 10000000
+Options -Indexes
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+ErrorDocument 405 /index.php
+ErrorDocument 408 /index.php
+ErrorDocument 500 /index.php
+ErrorDocument 504 /index.php
+ErrorDocument 502 /index.php
